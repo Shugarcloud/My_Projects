@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package task_List;
 
-/**
- *
- * @author Club01
- */
+
 public class Tasks {
+    public String description;
+    public boolean completed;
+
+    public Tasks(String description) {
+        this.description = description;
+        this.completed = false;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+    public boolean isComplete(){
+        return completed;
+    }
+    public void setAsCompleted(){
+        completed = true;
+    }
+    
+    //Override
+    
+    public String toString(){
+        return description + (completed ? "(completada)":"");
+    }
+    
     
 }
